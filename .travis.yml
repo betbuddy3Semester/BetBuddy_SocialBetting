@@ -6,18 +6,9 @@ branches:
     - dev
 script:
   - xbuild /p:Configuration=Release BetBuddy/BetBuddy.sln /p:TargetFrameworkVersion="v4.5"
-  - mono ./testrunner/NUnit.ConsoleRunner.3.2.0/tools/nunit3-console.exe ./BetBuddy/Tests/bin/Release/Tests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.2.0/tools/nunit3-console.exe ./BetBuddy/BetBuddyTest/bin/Release/BetBuddyTest.dll
 notifications:
   email: false
 install:
   - nuget restore BetBuddy/BetBuddy.sln
   - nuget install NUnit.Runners -Version 3.2.0 -OutputDirectory testrunner
-  
-deploy:
-  provider: releases
-  user: abored
-  password: anore1a!gpgf23
-  file: TestResult.xml
-  skip_cleanup: true
-  on:
-    tags: true 
