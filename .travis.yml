@@ -7,6 +7,7 @@ branches:
 script:
   - xbuild /p:Configuration=Release BetBuddy/BetBuddy.sln /p:TargetFrameworkVersion="v4.5"
   - mono ./testrunner/NUnit.ConsoleRunner.3.2.0/tools/nunit3-console.exe ./BetBuddy/BetBuddyTest/bin/Release/BetBuddyTest.dll
+  - find /usr/lib/mono -name "Microsoft.CSharp.targets"
 notifications:
   email: false
 install:
