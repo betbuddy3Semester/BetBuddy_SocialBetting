@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetBuddy", "BetBuddy\BetBuddy.csproj", "{4A1BB3A3-ADA0-464B-AEE7-26FE2C2828B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetBuddyMVC", "BetBuddy\BetBuddyMVC.csproj", "{4A1BB3A3-ADA0-464B-AEE7-26FE2C2828B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "ServiceLayer\Service.csproj", "{8D199C6B-286B-4F22-85B5-861A959FBB16}"
 EndProject

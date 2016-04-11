@@ -1,8 +1,10 @@
 ﻿using Microsoft.Owin;
+using MVCBetBud;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(BetBuddy.Startup))]
-namespace BetBuddy
+[assembly: OwinStartup(typeof (Startup))]
+
+namespace MVCBetBud
 {
     public partial class Startup
     {
