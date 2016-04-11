@@ -1,11 +1,11 @@
 language: csharp
-solution: BetBuddy/BetBuddy.sln
+solution: BetBuddy.sln
 branches:
   only:
     - master
     - dev
 script:
-  - xbuild /p:Configuration=Release BetBuddy/BetBuddy.sln
+  - xbuild /p:Configuration=Release BetBuddy.sln
   - mono ./testrunner/NUnit.ConsoleRunner.3.2.0/tools/nunit3-console.exe ./BetBuddy/BetBuddyTest/bin/Release/BetBuddyTest.dll
 notifications:
   email: false
