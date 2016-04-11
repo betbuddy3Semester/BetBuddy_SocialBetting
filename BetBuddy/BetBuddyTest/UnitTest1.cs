@@ -11,8 +11,10 @@ namespace BetBuddyTest
         {
             var i = 5;
             var e = 10;
+            var x = 15;
             Assert.AreEqual(i, 5);
             Assert.AreEqual(e, 10);
+            Assert.AreEqual(x, 15);
         }
     }
 }
