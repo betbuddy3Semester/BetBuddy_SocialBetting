@@ -1,2 +1,23 @@
-language: C#
-sudo: required
+language: csharp
+solution: betbuddy3Semester/BetBuddy_SocialBetting.sln
+branches:
+  only:
+    - master
+    - dev
+script:
+  - xbuild /p:Configuration=Release betbuddy3Semester/BetBuddy_SocialBetting.sln /p:TargetFrameworkVersion="v4.5"
+  - mono ./testrunner/NUnit.ConsoleRunner.3.2.0/tools/nunit3-console.exe ./BetBuddy_SocialBetting/Tests/bin/Release/Tests.dll
+notifications:
+  email: false
+install:
+  - nuget restore betbuddy3Semester/BetBuddy_SocialBetting.sln
+  - nuget install NUnit.Runners -Version 3.2.0 -OutputDirectory testrunner
+  
+deploy:
+  provider: releases
+  user: abored
+  password: anore1a!gpgf23
+  file: TestResult.xml
+  skip_cleanup: true
+  on:
+    tags: true 
